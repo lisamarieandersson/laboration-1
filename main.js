@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", main);
 let text;
 /** @type {HTMLButtonElement} val 1 i alla scener */
 let button1; 
-/** @type {HTMLButtonElement} val 2 i alla scener utom...*/
+/** @type {HTMLButtonElement} val 2 i alla scener utom slutscen 2*/
 let button2; 
 
 function main() {
@@ -64,8 +64,8 @@ function loadSevernCityAirportScene() {
   button1.textContent = "Stay at the airport";
   button1.onclick = loadEndSceneTwo;
   
-  button2.textContent = "Try to leave"; //Annat alternativ som laddas för att inte hamna i mataffären i nästa steg! :)
-  button2.onclick = loadEndSceneOne;
+  button2.textContent = "Try to leave";
+  button2.onclick = loadEndSceneThree;
 }
 
 function loadEndSceneOne() {
@@ -88,4 +88,13 @@ function loadEndSceneTwo() {
   button2.classList.add('hidden');
 }
 
+function loadEndSceneThree() {
+  text.textContent = `Oh no, you won't make this on your own!`;
+
+  button1.textContent = "Start over";
+  button1.onclick = loadStartScene;
+
+  button2.textContent = "Go back";
+  button2.onclick = loadSevernCityAirportScene;
+}
   
