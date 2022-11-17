@@ -1,0 +1,37 @@
+body {
+    background-color:rgb(253, 238, 237);
+    font-family: 'Space Mono', monospace;
+    margin: 8rem;    
+}
+div {
+    background-color: white;
+    width: 30rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-color: lightskyblue;
+    border-style: dashed;
+}
+
+#opt-1 {
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    border-radius: 15px;
+    height: 3rem;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+}
+
+#opt-2 {
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    border-radius: 15px;
+    height: 3rem;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
