@@ -14,7 +14,7 @@ let button2;
  */
 function main() {
   loadHtmlElements();
-  loadStartPage();
+  loadFirstPage();
 }
 /**
  * Här laddas alla html-element
@@ -29,11 +29,10 @@ function loadHtmlElements() {
 /**
  * Funktionen ska... Syfte... 
  */
-function loadStartPage() {
+function loadFirstPage() {
   headline.textContent = `Hello and welcome!`;
-  text.textContent = `In this world you are faced with different scenarios
-    in the novel Station Eleven by Emily St. John Mandel.
-    Where do you want to go? And what choices do you want to make?`;
+  text.textContent = `In this world you are faced with different scenarios in the novel 
+    Station Eleven by Emily St. John Mandel.`;
   
   button1.textContent = "Start";
   button1.onclick = loadStartScene; 
@@ -111,13 +110,14 @@ function loadSevernCityAirportScene() {
 }
 
 function loadEndSceneOne() {
+  document.body.style.backgroundImage  = "url(./images/stationeleven.jpeg)";
 
   headline.textContent = `:(`;
 
   text.textContent = `Oh no, you won't make this on your own!`;
 
   button1.textContent = "Start over";
-  button1.onclick = loadStartPage;
+  button1.onclick = loadFirstPage;
   
   button2.textContent = "Go back";
   button2.onclick = loadGroceryStoreScene;
@@ -132,19 +132,20 @@ function loadEndSceneTwo() {
   text.textContent = `You survived, you are now safe!`;
 
   button1.textContent = "Start over";
-  button1.onclick = loadStartPage;
+  button1.onclick = loadFirstPage;
 
   button2.classList.add('hidden');
 }
 
 function loadEndSceneThree() {
+  document.body.style.backgroundImage  = "url(./images/stationeleven.jpeg)";
 
   headline.textContent = `:(`;
 
   text.textContent = `Oh no, you won't make this on your own!`;
 
   button1.textContent = "Start over";
-  button1.onclick = loadStartPage;
+  button1.onclick = loadFirstPage;
 
   button2.textContent = "Go back";
   button2.onclick = loadSevernCityAirportScene;

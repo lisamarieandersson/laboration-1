@@ -17,6 +17,10 @@ div {
     border-style: dashed;
 }
 
+/*#text {
+    white-space: pre-line;
+}*/
+
 #opt-1 {
     background-color: dodgerblue;
     border-color: dodgerblue;
