@@ -21,8 +21,9 @@ div {
     background-color: dodgerblue;
     border-color: dodgerblue;
     border-radius: 15px;
-    height: 3rem;
-    color: white;
+    padding: 1rem;
+    height: 4rem;
+    color: ivory;
     font-family: 'Space Mono', monospace;
     font-size: 1rem;
 }
@@ -31,8 +32,9 @@ div {
     background-color: dodgerblue;
     border-color: dodgerblue;
     border-radius: 15px;
-    height: 3rem;
-    color: white;
+    padding: 1rem;
+    height: 4rem;
+    color: ivory;
     font-family: 'Space Mono', monospace;
     font-size: 1rem;
 }

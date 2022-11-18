@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", main);
 
-/** @type {HTMLParagraphElement} h-tag för att ändra rubriken i varje scen */
+/** @type {HTMLHeadingElement} h3-tag för att ändra rubriken i varje scen */
 let headline;
 /** @type {HTMLParagraphElement} p-tag för att ändra texten i varje scen */
 let text;
@@ -14,7 +14,7 @@ let button2;
  */
 function main() {
   loadHtmlElements();
-  loadStartScene();
+  loadStartPage();
 }
 /**
  * Här laddas alla html-element
@@ -29,11 +29,24 @@ function loadHtmlElements() {
 /**
  * Funktionen ska... Syfte... 
  */
-function loadStartScene() {
+function loadStartPage() {
   headline.textContent = `Hello and welcome!`;
   text.textContent = `In this world you are faced with different scenarios
     in the novel Station Eleven by Emily St. John Mandel.
     Where do you want to go? And what choices do you want to make?`;
+  
+  button1.textContent = "Start";
+  button1.onclick = loadStartScene; 
+
+  button2.classList.add('hidden');
+}
+
+/**
+ * Funktionen ska... Syfte... 
+ */
+ function loadStartScene() {
+  headline.textContent = `Hello!`;
+  text.textContent = `Where do you want to go? And what choices do you want to make?`;
   
   button1.textContent = "Go to the theater";
   button1.onclick = loadTheaterScene;
@@ -60,6 +73,7 @@ function loadTheaterScene() {
   
   button2.textContent = "Go to your brother Frank's apartment";
   button2.onclick = loadEndSceneTwo;
+  button2.classList.remove('hidden');
 }
 
 /**
@@ -103,7 +117,7 @@ function loadEndSceneOne() {
   text.textContent = `Oh no, you won't make this on your own!`;
 
   button1.textContent = "Start over";
-  button1.onclick = loadStartScene;
+  button1.onclick = loadStartPage;
   
   button2.textContent = "Go back";
   button2.onclick = loadGroceryStoreScene;
@@ -118,7 +132,7 @@ function loadEndSceneTwo() {
   text.textContent = `You survived, you are now safe!`;
 
   button1.textContent = "Start over";
-  button1.onclick = loadStartScene;
+  button1.onclick = loadStartPage;
 
   button2.classList.add('hidden');
 }
@@ -130,7 +144,7 @@ function loadEndSceneThree() {
   text.textContent = `Oh no, you won't make this on your own!`;
 
   button1.textContent = "Start over";
-  button1.onclick = loadStartScene;
+  button1.onclick = loadStartPage;
 
   button2.textContent = "Go back";
   button2.onclick = loadSevernCityAirportScene;
