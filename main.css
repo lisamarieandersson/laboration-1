@@ -1,6 +1,6 @@
 body {
     font-family: 'Space Mono', monospace;
-    margin: 8rem;    
+    margin: 7rem;    
     height: 100vh;
     background-image: url(./images/stationeleven.jpeg);
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@ body {
 
 div {
     background-color: ivory;
-    width: 33rem;
+    width: 35rem;
     padding: 1rem;
     margin-bottom: 2rem;
     border-color: lightskyblue;

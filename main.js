@@ -6,7 +6,8 @@ let headline;
 let text;
 /** @type {HTMLButtonElement} val 1 i alla scener */
 let button1; 
-/** @type {HTMLButtonElement} val 2 i alla scener utom LoadFirstPage, loadDrEleven, loadFollowKirstenhome och loadEndScene2 */
+/** @type {HTMLButtonElement} val 2 i alla scener utom LoadFirstPage,
+ * loadDrEleven, loadFollowKirstenhome och loadEndScene2 */
 let button2; 
 
 /**
@@ -28,7 +29,8 @@ function loadHtmlElements() {
 }
 
 /**
- * Funktionen ska ladda första sidan med med syfte att ge ett sammanhang till användaren om vad den textbaserade upplevelsen handlar om
+ * Funktionen ska ladda första sidan med med syfte att ge ett sammanhang till användaren 
+ * om vad den textbaserade upplevelsen handlar om
  */
 function loadFirstPage() {
   headline.textContent = `Hello and welcome!`;
@@ -43,7 +45,8 @@ function loadFirstPage() {
 }
 
 /**
- * Funktionen ska ladda nästkommande sida med syfte att ge info till användaren om sammanhanget kring bilderna som används på sidan
+ * Funktionen ska ladda nästkommande sida med syfte att ge info till användaren 
+ * om sammanhanget kring bilderna som används på sidan
  */
 function loadDrEleven() {
   headline.textContent = `Dr. Eleven`;
@@ -58,7 +61,8 @@ function loadDrEleven() {
 }
 
 /**
- * Funktionen ska ladda startscenen för den interaktiva upplevelsen och ge användaren olika val att klicka sig vidare till
+ * Funktionen ska ladda startscenen för den interaktiva upplevelsen och ge 
+ * användaren olika val att klicka sig vidare till
  */
  function loadStartScene() {
   headline.textContent = `Hello, you are now entering Station Eleven!`;
@@ -87,7 +91,7 @@ function loadTheaterScene() {
 
     During the performance the leading actor Arthur has a heart attack. You run up on the stage and try to help. Unfortunately you can't save him.
     
-    Afterwards everything is in chaos. You go outside and you see one of the actors standing alone, looking shocked. 
+    Afterwards everything is in chaos. You go outside and you see one of the actors, standing there alone in the crowd, looking shocked. 
     
     What's your next move?`;
 
@@ -195,7 +199,7 @@ function loadLeaveKirstenScene() {
 
   headline.textContent = `:(`;
 
-  text.textContent = `Oh no, you won't be able to live with yourself if you make this choice!`;
+  text.textContent = `Oh no, after what you now know, you won't be able to live with yourself if you make this choice!`;
   
   button1.textContent = "Start over";
   button1.onclick = loadFirstPage;
@@ -206,16 +210,14 @@ function loadLeaveKirstenScene() {
 
 /**
  * Funktionen ska ladda "Följ Kirsten hem-scenen" - 
- * just i denna scen kan inte användaren välja fler val, 
- * utan enbart klicka sig vidare till nästa scen
+ * just i denna scen kan inte användaren välja fler val, den fungerar mer som ett mellanspel,
+ * och användaren kan enbart klicka sig vidare till nästa scen
  */
 function loadFollowKirstenHome() {
 
   headline.textContent = `Follow Kirsten home`;
 
-  text.textContent = `You get off at a subway stop and walk Kirsten to her house. You stay outside the gate and wait for her to enter the door safely.
-    
-    Kirsten knocks at the door but noone opens. Her phone has died, and she doesn't know her parents number by heart.
+  text.textContent = `You get off at a subway stop and walk Kirsten to her house. You stay outside the gate and wait for her to enter the door safely. Kirsten knocks at the door but no one opens. Her phone has died, and she doesn't know her parents number by heart.
     
     Kirsten says "Tanya has the key to the house". 
     You ask: "Is there's anyone else I can leave you with?". She replies: "Arthur".
@@ -277,7 +279,7 @@ function loadEndSceneOne() {
 }
 
 /**
- * Funktionen ska ladda "Slutscen 2" - där användaren överlever genom att ha gjort 
+ * Funktionen ska ladda "Slutscen 2" - där användaren "överlever" genom att ha gjort 
  * vissa val och får möjligheten att börja om från början
  */
 function loadEndSceneTwo() {
