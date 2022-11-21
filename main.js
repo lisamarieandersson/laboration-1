@@ -6,16 +6,17 @@ let headline;
 let text;
 /** @type {HTMLButtonElement} val 1 i alla scener */
 let button1; 
-/** @type {HTMLButtonElement} val 2 i alla scener utom förstasidan, Dr. Eleven-sidan och slutscen 2 */
+/** @type {HTMLButtonElement} val 2 i alla scener utom LoadFirstPage, loadDrEleven, loadFollowKirstenhome och loadEndScene2 */
 let button2; 
 
 /**
-* Här startar programmet 
+* Här startar programmet - en textbaserad interaktiv upplevelse
 */
 function main() {
   loadHtmlElements();
   loadFirstPage();
 }
+
 /**
  * I denna funktion laddas alla html-element som används på sidan
  */
@@ -27,7 +28,7 @@ function loadHtmlElements() {
 }
 
 /**
- * Funktionen ska... Syfte... 
+ * Funktionen ska ladda första sidan med med syfte att ge ett sammanhang till användaren om vad den textbaserade upplevelsen handlar om
  */
 function loadFirstPage() {
   headline.textContent = `Hello and welcome!`;
@@ -41,6 +42,9 @@ function loadFirstPage() {
   button2.classList.add('hidden');
 }
 
+/**
+ * Funktionen ska ladda nästkommande sida med syfte att ge info till användaren om sammanhanget kring bilderna som används på sidan
+ */
 function loadDrEleven() {
   headline.textContent = `Dr. Eleven`;
   text.textContent = `Within the main story, one of the remains from the collapsed world is a graphic novel titled Station Eleven.
@@ -54,7 +58,7 @@ function loadDrEleven() {
 }
 
 /**
- * Funktionen ska... Syfte... 
+ * Funktionen ska ladda startscenen för den interaktiva upplevelsen och ge användaren olika val att klicka sig vidare till
  */
  function loadStartScene() {
   headline.textContent = `Hello, you are now entering Station Eleven!`;
@@ -71,7 +75,8 @@ function loadDrEleven() {
 }
 
 /**
- * Funktionen ska... Syfte...
+ * Funktionen ska ladda det första valet av scen - "Teaterscenen" -
+ * där användaren kan klicka sig vidare mellan två alternativ
  */
 function loadTheaterScene() {
   document.body.style.backgroundImage = "url(./images/doctoreleven.jpeg)";
@@ -95,7 +100,26 @@ function loadTheaterScene() {
 }
 
 /**
- * Funktionen ska... Syfte... 
+ * Funktionen ska ladda det andra valet av scen - "Flygplatsscenen" - 
+ * där användaren kan klicka sig vidare mellan två alternativ
+ */
+function loadSevernCityAirportScene() {
+
+  headline.textContent = `Welcome to Severn City Airport!`;
+
+  text.textContent = ` In the terminal you watch the news report about a deadly flu coming your way. 
+    What's your next move?`;
+  
+  button1.textContent = "Stay at the airport";
+  button1.onclick = loadEndSceneTwo;
+  
+  button2.textContent = "Try to leave";
+  button2.onclick = loadEndSceneFour;
+}
+
+/**
+ * Funktionen ska ladda "Tunnelbanescenen" - 
+ * där användaren i sin tur kan klicka sig vidare mellan två alternativ
  */
  function loadTheSubwayScene() {
   document.body.style.backgroundImage = "url('./images/galaxystationeleven.jpeg')";
@@ -115,8 +139,11 @@ function loadTheaterScene() {
   button2.onclick = loadEndSceneOne;
 }
 
+/**
+ * Funktionen ska ladda valet "Skådespelarscenen" - 
+ * där användaren i sin tur kan klicka sig vidare mellan två alternativ
+ */
 function loadTheActorScene() {
-  //document.body.style.backgroundImage = null;
 
   headline.textContent = `The Actor - Kirsten`;
 
@@ -134,6 +161,11 @@ function loadTheActorScene() {
   button2.textContent = "Ask to follow Kirsten so she gets home safe";
   button2.onclick = loadTheSubwaySceneTwo;
 }
+
+/**
+ * Funktionen ska ladda en alternativ "Tunnelbanescen" - 
+ * där användaren i sin tur kan klicka sig vidare mellan två alternativ
+ */
 
 function loadTheSubwaySceneTwo() {
 
@@ -154,6 +186,11 @@ function loadTheSubwaySceneTwo() {
   button2.onclick = loadFollowKirstenHome;
 }
 
+/**
+ * Funktionen ska ladda en "Lämna Kirsten-Scen" där användaren hamnar i ett moraliskt 
+ * dilemma och får en begränsning i att välja att gå tillbaka till föregående scen och 
+ * välja det andra alternativet för att komma vidare eller börja om från början
+ */
 function loadLeaveKirstenScene() {
 
   headline.textContent = `:(`;
@@ -167,6 +204,11 @@ function loadLeaveKirstenScene() {
   button2.onclick = loadTheSubwaySceneTwo;
 } 
 
+/**
+ * Funktionen ska ladda "Följ Kirsten hem-scenen" - 
+ * just i denna scen kan inte användaren välja fler val, 
+ * utan enbart klicka sig vidare till nästa scen
+ */
 function loadFollowKirstenHome() {
 
   headline.textContent = `Follow Kirsten home`;
@@ -176,7 +218,7 @@ function loadFollowKirstenHome() {
     Kirsten knocks at the door but noone opens. Her phone has died, and she doesn't know her parents number by heart.
     
     Kirsten says "Tanya has the key to the house". 
-    You ask: "Is there's anyone else I can leave you with?". She replies "Arthur".
+    You ask: "Is there's anyone else I can leave you with?". She replies: "Arthur".
     
     You sigh. And then reply that you can't leave her there alone, so you ask her to follow you along to the grocery store.`;
   
@@ -187,7 +229,8 @@ function loadFollowKirstenHome() {
 } 
 
 /**
- * Funktionen ska... Syfte... 
+ * Funktionen ska ladda "Mataffär-scenen" - 
+ * där användaren i sin tur kan klicka sig vidare mellan två alternativ 
  */
 function loadGroceryStoreScene() {
   document.body.style.backgroundImage = "url('./images/galaxystationeleven.jpeg')";
@@ -212,20 +255,12 @@ function loadGroceryStoreScene() {
   button2.classList.remove('hidden');
 }
 
-function loadSevernCityAirportScene() {
-
-  headline.textContent = `Welcome to Severn City Airport!`;
-
-  text.textContent = ` In the terminal you watch the news report about a deadly flu coming your way. 
-    What's your next move?`;
-  
-  button1.textContent = "Stay at the airport";
-  button1.onclick = loadEndSceneTwo;
-  
-  button2.textContent = "Try to leave";
-  button2.onclick = loadEndSceneFour;
-}
-
+/**
+ * Funktionen ska ladda "Slutscen 1" - 
+ * där användaren hamnar i ett dilemma och får en begränsning i att 
+ * välja att gå tillbaka till föregående scen och välja det andra alternativet 
+ * för att komma vidare eller börja om från början
+ */
 
 function loadEndSceneOne() {
   document.body.style.backgroundImage  = "url(./images/stationeleven.jpeg)";
@@ -241,6 +276,10 @@ function loadEndSceneOne() {
   button2.onclick = loadTheSubwayScene;
 }
 
+/**
+ * Funktionen ska ladda "Slutscen 2" - där användaren överlever genom att ha gjort 
+ * vissa val och får möjligheten att börja om från början
+ */
 function loadEndSceneTwo() {
   document.body.style.backgroundImage  = "url(./images/stationeleven.jpeg)";
 
@@ -254,6 +293,12 @@ function loadEndSceneTwo() {
   button2.classList.add('hidden');
 }
 
+/**
+ * Funktionen ska ladda "Slutscen 3" - 
+ * där användaren hamnar i ett moraliskt dilemma och får en begränsning i att 
+ * välja att gå tillbaka till föregående scen och välja det andra alternativet 
+ * för att komma vidare eller börja om från början
+ */
 function loadEndSceneThree() {
   document.body.style.backgroundImage  = "url(./images/stationeleven.jpeg)";
 
@@ -268,6 +313,13 @@ function loadEndSceneThree() {
   button2.textContent = "Go back";
   button2.onclick = loadGroceryStoreScene;
 }
+
+/**
+ * Funktionen ska ladda "Slutscen 4" - 
+ * där användaren hamnar i ett dilemma och får en begränsning i att 
+ * välja att gå tillbaka till föregående scen och välja det andra alternativet 
+ * för att komma vidare eller börja om från början
+ */
 
 function loadEndSceneFour() {
   document.body.style.backgroundImage  = "url(./images/stationeleven.jpeg)";
