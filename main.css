@@ -10,16 +10,16 @@ body {
 
 div {
     background-color: ivory;
-    width: 30rem;
+    width: 33rem;
     padding: 1rem;
     margin-bottom: 2rem;
     border-color: lightskyblue;
     border-style: dashed;
 }
 
-/*#text {
+#text {
     white-space: pre-line;
-}*/
+}
 
 #opt-1 {
     background-color: dodgerblue;
