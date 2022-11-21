@@ -108,6 +108,7 @@ function loadTheaterScene() {
  * där användaren kan klicka sig vidare mellan två alternativ
  */
 function loadSevernCityAirportScene() {
+  document.body.style.backgroundImage = "url('./images/dreleveninspace.jpeg')";
 
   headline.textContent = `Welcome to Severn City Airport!`;
 
@@ -173,9 +174,9 @@ function loadTheActorScene() {
 
 function loadTheSubwaySceneTwo() {
 
-  headline.textContent = `The Subway - with Kirsten`;
+  headline.textContent = `The Subway with Kirsten`;
 
-  text.textContent = `You're now on the subway ride with Kirsten. You notice that she has a graphic novel in her backpack, titled Station Eleven.
+  text.textContent = `You're now on the subway ride with Kirsten. In her backpack you notice that she carries a graphic novel, with an illustration of a spaceman on the front page, and the title Station Eleven.
   
     During the trip your sister Siya, who works as a doctor at the hospital, calls to tell you that a deadly flu has reached the city. 
   
@@ -245,7 +246,7 @@ function loadGroceryStoreScene() {
 
     Outside in the parking lot Kirsten says that she wants to go home. 
     
-    Since the world is about to collapse, you know she won't make it on her own.
+    Since the world is about to collapse, you know she won't make it on her own. And you don't know how to reach her parents or anyone who knows her.
 
     What's your next move?`;
   
