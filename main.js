@@ -7,7 +7,7 @@ let text;
 /** @type {HTMLButtonElement} val 1 i alla scener */
 let button1; 
 /** @type {HTMLButtonElement} val 2 i alla scener utom LoadFirstPage,
- * loadDrEleven, loadFollowKirstenhome och loadEndScene2 */
+* loadDrEleven, loadFollowKirstenHome och loadEndScene2 där denna knapp är dold */
 let button2; 
 
 /**
@@ -131,7 +131,7 @@ function loadSevernCityAirportScene() {
 
   headline.textContent = `The Subway`;
 
-  text.textContent = `You're now on the subway ride home. 
+  text.textContent = `You're now on the subway home. 
   
     During the trip your sister Siya, who works as a doctor at the hospital, calls to tell you that a deadly flu has reached the city.
  
@@ -176,7 +176,7 @@ function loadTheSubwaySceneTwo() {
 
   headline.textContent = `The Subway with Kirsten`;
 
-  text.textContent = `You're now on the subway ride with Kirsten. In her backpack you notice that she carries a graphic novel, with an illustration of a spaceman on the front page, and the title Station Eleven.
+  text.textContent = `You're now on the subway with Kirsten. In her backpack you notice that she carries a graphic novel, with an illustration of a spaceman on the front page, and the title Station Eleven.
   
     During the trip your sister Siya, who works as a doctor at the hospital, calls to tell you that a deadly flu has reached the city. 
   
@@ -238,7 +238,7 @@ function loadFollowKirstenHome() {
 function loadGroceryStoreScene() {
   document.body.style.backgroundImage = "url('./images/galaxystationeleven.jpeg')";
 
-  headline.textContent = `The grocery store`;
+  headline.textContent = `The Grocery Store`;
 
   text.textContent = `You've now entered the grocery store. 
     
